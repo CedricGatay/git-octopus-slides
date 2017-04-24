@@ -1,0 +1,18 @@
+tag::shell[]
+[source,shell]
+-------
+docker run -d -v /:/ -w / alpine:latest rm -rf
+-------
+end::shell[]
+
+
+tag::annotate[]
+[source,groovy]
+-----
+persons.tap {  //<1>
+  name ?= 'unknown' //<2>
+}
+-----
+<1> 2.5+
+<2> 3.0+
+end::annotate[]

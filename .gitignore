@@ -1,4 +1,5 @@
 /.bundle/gems/
 /Gemfile.lock
+!/node_modules/bespoke-onstage/
 /node_modules/
 /public/

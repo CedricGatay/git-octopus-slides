@@ -1,0 +1,7 @@
+#tag::docs[]
+i='bundle && npm i'
+r='gulp serve'
+b='gulp'
+gw='./gradlew -t asciidoc'
+m='mvn package'
+#end::docs[]

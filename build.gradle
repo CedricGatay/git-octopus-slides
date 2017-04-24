@@ -1,0 +1,26 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'org.asciidoctor:asciidoctor-gradle-plugin:1.5.3' //<1>
+        classpath 'org.asciidoctor:asciidoctorj-pdf:1.5.0-alpha.15' //<2>
+    }
+}
+apply plugin: 'org.asciidoctor.convert'                             //<1>
+asciidoctorj {
+    version = '1.5.5'                                               //<3>
+}
+asciidoctor {
+  backends 'html5', 'pdf'                                           //<4>
+  attributes(                                                       //<5>
+        'build-gradle': file('build.gradle'),
+        'basedir': rootDir,
+        'source-highlighter': 'coderay',
+        'toc': 'left',
+        'icons': 'font',
+        'setanchors': '',
+        'idprefix': '',
+        'idseparator': '-',
+        'docinfo1': '')
+}

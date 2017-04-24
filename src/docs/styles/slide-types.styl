@@ -1,0 +1,45 @@
+section.title
+  background-color $color-heading
+  h1
+    color $color-inverse
+.bespoke-active
+  background-image: url('/images/ct-logo.png');
+  background-repeat: no-repeat;
+  background-position: bottom right;
+
+section 
+  .two-columns
+    display: flex;
+    flex-flow: rows wrap;
+    align-items: center;
+    text-align:left;
+    width: 100%;
+    > pre.source, > ol, > ul, > p, > figure
+      &:first-of-type
+        flex: 1
+        max-width: 50%;
+    .left-content
+      flex: 1
+    div.colist
+      margin-top:300px;
+      margin-left:-300px;
+      flex : 1
+    &.center
+      text-align: center;
+  
+  > pre.source
+      width: calc(100% - 1em);
+
+.bigIcon
+  position: absolute;
+  font-size: 5em;
+  top: 0.2em;
+  left: 3.5em;
+
+
+.conum { display: inline-block; color: white !important; background-color: #222222; -webkit-border-radius: 100px; border-radius: 100px; text-align: center; width: 32px; height: 32px; font-size: 20px; font-weight: bold; line-height: 32px; font-family: Arial, sans-serif; font-style: normal; position: relative; top: -2px; letter-spacing: -1px; margin-right:6px}
+.conum * { color: white !important; }
+.conum + b { display: none; }
+.conum:after { content: attr(data-value); }
+.conum:not([data-value]):empty { display: none; }
+.admonitionblock td.icon .icon-note:before { content: "\f05a"; color: #005498; color: #003f72; }

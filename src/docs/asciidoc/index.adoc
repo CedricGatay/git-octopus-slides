@@ -1,0 +1,411 @@
+:source-highlighter: prettify
+:icons: font
+
+= Asciidoc 
+Cedric Gatay <http://code-troopers.com>
+:organization: Code-Troopers
+:position: Developer — Co-founder – GDG Tours
+:twitter: @Cedric_Gatay
+:github: CedricGatay
+:avatar: CG_BW.jpg
+:!sectids:
+:!hardbreaks:
+:stem:
+:imagesdir: ./images/
+:imagesoutdir: {basedir}/src/docs/images/
+
+== !
+
+include::banner.adoc[]
+
+[transform=speaker]
+== Speaker
+
+== icon:code-fork[]
+
+
+ * icon:mobile[] http://navigtours.com[Navig'Tours]
+ * icon:mobile[] Aucard de Tours / Terres du son
+ * icon:github[] FOSS :
+ ** Android Betterpickers 
+ ** sbt plugins
+ ** wicket-hot-reload 
+ 
+== icon:life-ring[]
+
+ * Code
+ * Build
+ * Host : OpenDeviceLab Tours
+
+== icon:comment[]
+
+ * Brown Bag Lunch
+ * Google Developer Group Tours Lead
+ * Polytech'Tours instructor
+
+== What is Asciidoc ?
+
+* Markdown on steroid
+* Spec with a RI
+* Python
+* Multiple backends
+* Attributes
+
+== Asciidoc syntax
+
+== Headings
+
+//include::samples/_h.adoc[]
+
+[source,asciidoc]
+----
+include::samples/_h.adoc[]
+----
+
+== Bullet point
+
+[.two-columns]
+--
+[.left-content]
+include::samples/_ul.adoc[]
+
+[source,asciidoc]
+----
+include::samples/_ul.adoc[]
+----
+--
+
+== Ordered lists
+
+[.two-columns]
+--
+include::samples/_ol.adoc[]
+
+[source,asciidoc]
+----
+include::samples/_ol.adoc[]
+----
+--
+
+== Rich content
+
+== Links
+
+[.two-columns.center]
+--
+include::samples/_rich.adoc[tags=link]
+
+[source,asciidoc]
+----
+include::samples/_rich.adoc[tags=link]
+----
+--
+
+== Images
+
+[.two-columns]
+--
+include::samples/_rich.adoc[tags=image]
+
+[source,asciidoc]
+----
+include::samples/_rich.adoc[tags=image]
+----
+--
+
+== Quotes
+
+include::samples/_rich.adoc[tags=quote]
+
+[source,asciidoc]
+----
+include::samples/_rich.adoc[tags=quote]
+----
+
+== Stem
+
+[.two-columns.center]
+--
+include::samples/_rich.adoc[tags=stem]
+
+[source,asciidoc]
+----
+include::samples/_rich.adoc[tags=stem]
+----
+--
+
+[.cue]
+****
+This uses mathjax to render the equations. LatexMath can even be used (if you want to play it rough)
+****
+
+== Admonition
+
+[.center]
+--
+
+include::samples/_rich.adoc[tags=admonition]
+
+[source,asciidoc]
+----
+include::samples/_rich.adoc[tags=admonition]
+----
+--
+
+== Tables
+
+include::samples/_table.adoc[]
+
+[source,asciidoc]
+----
+include::samples/_table.adoc[]
+----
+
+== File includes
+
+[.center]
+--
+include::samples/_death_star_plan.adoc[]
+
+[source,asciidoc]
+----
+\include::samples/_death_star_plan.adoc[]
+----
+--
+
+== Graphing libraries
+
+ * ditaa
+ * graphviz
+ * plantuml
+
+== PlantUML
+
+[.two-columns.center]
+--
+[plantuml, diagram-classes, png]     
+----
+include::{basedir}/src/main/groovy/App.groovy[tags=uml]
+----
+
+[source, asciidoc]
+----
+include::{basedir}/src/main/groovy/App.groovy[tags=uml]
+----
+--
+
+== Source highlighting
+
+[.full-width]
+--
+include::samples/_highlight.adoc[tags=shell]
+
+[source,asciidoc]
+----
+include::samples/_highlight.adoc[tags=shell]
+----
+--
+
+== Highlighter
+
+ * pygments
+ * coderay
+ * rouge
+ * highlight.js
+ * prettify
+
+[.cue]
+****
+Do not step on your own toes, highlighters compatibility will be discussed later on.
+****
+
+== Source annotation
+
+[.two-columns.left-content]
+--
+include::samples/_highlight.adoc[tags=annotate]
+
+[source,asciidoc,subs="-callouts"]
+----
+include::samples/_highlight.adoc[tags=annotate]
+----
+--
+
+== Where is used Asciidoc ?
+
+* Groovy lang documentation
+* JBoss docs
+* Slide decks
+* Books ?
+
+== WTF Asciidoc vs Asciidoctor ?
+
+* Ruby implementation
+** AsciidoctorJ Java binding
+** asciidoctor.js opal transpiled version
+* Broader set of tags
+* More precise syntax
+
+[.cue]
+****
+Last release for asciidoc python version is from 2013, whereas there is still work being done nowadays on asciidoctor.
+****
+
+== Markdown vs Asciidoc fight
+
+* Document includes
+* Tables
+* Syntax highlighting
+
+
+== In my projects?
+
+
+== Maven version
+
+[%build]
+== Plugin configuration
+
+
+[source,xml,indent=0]
+----
+include::{basedir}/pom.xml[tags=plugin]
+----
+<1> Add Asciidoctor plugin
+<2> Specify JRuby version
+<3> Specify AsciidoctorJ version
+<4> Specify Asciidoctor PDF backend
+
+
+== Output configuration
+
+== HTML
+[source,xml,indent=0]
+----
+include::{basedir}/pom.xml[tags=toHTML]
+----
+<1> Use specific highlighter
+
+[.cue]
+****
+CodeRay
+Asciidoctor, AsciidoctorJ, Asciidoctor PDF
+highlight.js
+Asciidoctor, AsciidoctorJ, Asciidoctor.js
+prettify
+Asciidoctor, AsciidoctorJ, Asciidoctor.js
+Pygments
+Asciidoctor, Asciidoctor PDF
+Rouge
+Asciidoctor PDF
+
+To use CodeRay, Pygments, or Rouge, you must have the appropriate library installed on your system. See the CodeRay or Pygments section to find installation instructions. (We don’t yet have a section about Rouge).
+
+On the other hand, if you’re using a client-side syntax highlighting library like highlight.js or prettify, there’s no need to install additional libraries. The generated HTML will load the required source files from a CDN (or custom URL or file path).
+****
+== PDF
+
+[source,xml,indent=0]
+----
+include::{basedir}/pom.xml[tags=toPDF]
+----
+
+== In your own projects suggestion
+
+== Project structure 
+
+[diagram]
+----
+src/                                
+   |__ docs/                          <1>
+           |__ asciidoc/              <2>
+                       |__ index.adoc <3>
+   |__ main/
+   |__ test/ 
+----
+<1> docs directory
+<2> asciidoc "category"
+<3> entrypoint to documentation
+
+== Gradle version
+
+[source,groovy]
+------
+include::{basedir}/build.gradle[]
+------
+<1> Add asciidoctor plugin
+<2> Add asciidoctor-pdf plugin
+<3> Specify Asciidoctor version
+<4> Configure output backends
+<5> Set attributes
+
+
+== Write content
+
+ * vim
+ * Visual Studio Code / Atom
+ * IntelliJ IDEA
+ * Asciidoctor.js live chrome extension
+ * Whatever
+
+
+== Real world usage
+
+== Slide decks
+
+ * JavaEE @ EPUT
+ * Docker Jenkins Slave BBL
+ * Various tech talks @JUG / @Docker Meetup
+ * These slides
+
+== @Code-Troopers  
+
+ * Blog and website [previously Jekyll, now Hugo]
+ * Internal documentation 
+   ** DNS Bindings
+   ** Projects README
+   ** https://github.com/code-troopers/ct[`.ctproject`] documentation
+
+[.cue]
+****
+We have our own tool for managing project launch in a consistent way by aliasing run commands to common verbs.
+
+However, it might be useful at times to generate a proper documentation
+****
+
+[source,shell]
+----
+include::{basedir}/.ctproject[tags=docs]
+----
+
+
+== Why should you use this?
+
+ * easy to version [diffable / mergeable]
+ * live documentation using includes
+ * annotate code easily
+ * built by your classical toolset
+ * easy to write on the go
+
+== Cons
+
+ * Github does not follow `includes`
+ * Writing docs can become addictive
+
+== Tips
+
+* Focus on content
+* Don't hesitate to split over multiple files
+* Have fun writing doc
+* Use includes for living content
+
+
+
+== Thank you
+
+ * Wanna become :
+  ** speaker ?
+  ** your own boss ?
+  ** Code-Trooper ?
+
+  Let's have a chat !
