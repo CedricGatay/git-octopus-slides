@@ -1,3 +1,7 @@
+tag::inline[]
+Change the default password (which is `weakisyoda`)
+end::inline[]
+
 tag::shell[]
 [source,shell]
 -------

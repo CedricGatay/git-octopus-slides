@@ -1,13 +1,15 @@
 :source-highlighter: prettify
 :icons: font
 
-= Asciidoc 
+=  
+////
 Cedric Gatay <http://code-troopers.com>
 :organization: Code-Troopers
 :position: Developer — Co-founder – GDG Tours
 :twitter: @Cedric_Gatay
 :github: CedricGatay
 :avatar: CG_BW.jpg
+////
 :!sectids:
 :!hardbreaks:
 :stem:
@@ -18,40 +20,90 @@ Cedric Gatay <http://code-troopers.com>
 
 include::banner.adoc[]
 
-[transform=speaker]
-== Speaker
+== image:CG_BW.jpg[]
+
+icon:twitter[] @Cedric_Gatay
+
+icon:code[] Developer
+
+icon:empire[] Code-Troopers co-founder
+
+icon:google[] GDG Tours lead
 
 == icon:code-fork[]
 
-
- * icon:mobile[] http://navigtours.com[Navig'Tours]
- * icon:mobile[] Aucard de Tours / Terres du son
- * icon:github[] FOSS :
- ** Android Betterpickers 
- ** sbt plugins
- ** wicket-hot-reload 
+ * icon:bus[] http://navigtours.com[Navig'Tours] icon:apple[]/icon:android[]
+ * icon:music[] Aucard de Tours / Terres du son icon:apple[]/icon:android[]
+ * icon:github[] FOSS:
+ ** icon:calendar[] Android Betterpickers icon:android[]
+ ** icon:github-alt[] sbt plugins icon:globe[]
+ ** icon:github-alt[] wicket-hot-reload icon:globe[]
  
 == icon:life-ring[]
 
- * Code
- * Build
- * Host : OpenDeviceLab Tours
+ * icon:keyboard-o[] Code
+ * icon:fire[] Build
+ * icon:dashboard[] Test: OpenDeviceLab Tours
 
 == icon:comment[]
 
- * Brown Bag Lunch
- * Google Developer Group Tours Lead
- * Polytech'Tours instructor
+ * icon:shopping-bag[] Brown Bag Lunch
+ * icon:google[] Google Developer Group Tours Lead
+ * icon:institution[] Polytech'Tours instructor
 
 == What is Asciidoc ?
 
+* Plain text markup language
 * Markdown on steroid
-* Spec with a RI
 * Python
 * Multiple backends
 * Attributes
+* Extensions
+
+== Agenda
+
+ * Syntax
+ * Project setup
+ * Feedback
+
+[.cue]
+****
+* An extensive look on the syntax that make Asciidoc, Markdown users should not be worried at first, but will discover niceties.
+
+* Examples using Maven / Gradle to integrate in your project
+
+* Feedback from usage in multiple project
+****
 
 == Asciidoc syntax
+
+== Bullet point
+
+[.two-columns%build]
+--
+[source,asciidoc]
+----
+include::samples/_ul.adoc[]
+----
+[.left-content]
+include::samples/_ul.adoc[]
+
+
+--
+
+== Ordered lists
+
+[.two-columns%build]
+--
+
+[source,asciidoc]
+----
+include::samples/_ol.adoc[]
+----
+
+include::samples/_ol.adoc[]
+
+--
 
 == Headings
 
@@ -62,76 +114,69 @@ include::banner.adoc[]
 include::samples/_h.adoc[]
 ----
 
-== Bullet point
+[.cue]
+****
+There is a subtle thing in this demo of syntax, I can't show what the result is here.
+****
 
-[.two-columns]
---
-[.left-content]
-include::samples/_ul.adoc[]
-
-[source,asciidoc]
-----
-include::samples/_ul.adoc[]
-----
---
-
-== Ordered lists
-
-[.two-columns]
---
-include::samples/_ol.adoc[]
-
-[source,asciidoc]
-----
-include::samples/_ol.adoc[]
-----
---
 
 == Rich content
 
 == Links
 
-[.two-columns.center]
+[.two-columns.center%build]
 --
-include::samples/_rich.adoc[tags=link]
 
 [source,asciidoc]
 ----
 include::samples/_rich.adoc[tags=link]
 ----
+
+include::samples/_rich.adoc[tags=link]
+
+
 --
 
 == Images
 
-[.two-columns]
+[.two-columns%build]
 --
-include::samples/_rich.adoc[tags=image]
 
 [source,asciidoc]
 ----
 include::samples/_rich.adoc[tags=image]
 ----
+
+include::samples/_rich.adoc[tags=image]
+
 --
 
 == Quotes
 
-include::samples/_rich.adoc[tags=quote]
-
+[%build]
+--
 [source,asciidoc]
 ----
 include::samples/_rich.adoc[tags=quote]
 ----
+
+include::samples/_rich.adoc[tags=quote]
+
+--
 
 == Stem
 
-[.two-columns.center]
+[.two-columns.center%build]
 --
-include::samples/_rich.adoc[tags=stem]
 
 [source,asciidoc]
 ----
 include::samples/_rich.adoc[tags=stem]
 ----
+
+include::samples/_rich.adoc[tags=stem]
+
+
 --
 
 [.cue]
@@ -141,37 +186,53 @@ This uses mathjax to render the equations. LatexMath can even be used (if you wa
 
 == Admonition
 
-[.center]
+[.center%build]
 --
-
-include::samples/_rich.adoc[tags=admonition]
 
 [source,asciidoc]
 ----
 include::samples/_rich.adoc[tags=admonition]
 ----
+
+include::samples/_rich.adoc[tags=admonition]
+
 --
 
 == Tables
 
-include::samples/_table.adoc[]
+[%build]
+--
 
 [source,asciidoc]
 ----
 include::samples/_table.adoc[]
 ----
 
+include::samples/_table.adoc[]
+
+--
+
 == File includes
 
-[.center]
+[.center%build]
 --
-include::samples/_death_star_plan.adoc[]
 
 [source,asciidoc]
 ----
 \include::samples/_death_star_plan.adoc[]
 ----
+
+include::samples/_death_star_plan.adoc[]
+
 --
+
+[.cue]
+****
+Here comes one of the best features of Asciidoc(tor) when it comes to comparing with its rival.
+File inclusion is a powerful tool that allows to split easily over multiple files while rendering in a consistent way.
+
+NOTE: This slide deck is almost written using exclusively `include`
+****
 
 == Graphing libraries
 
@@ -181,29 +242,50 @@ include::samples/_death_star_plan.adoc[]
 
 == PlantUML
 
-[.two-columns.center]
+[.two-columns.center%build]
 --
-[plantuml, diagram-classes, png]     
-----
-include::{basedir}/src/main/groovy/App.groovy[tags=uml]
-----
 
 [source, asciidoc]
 ----
 include::{basedir}/src/main/groovy/App.groovy[tags=uml]
 ----
+
+[plantuml, diagram-classes, png]     
+----
+include::{basedir}/src/main/groovy/App.groovy[tags=uml]
+----
+
+--
+
+[.cue]
+****
+When I say that includes are powerful, in fact this part is coming from the comments located on the top of a Groovy class file.
+
+You can really easily mix and match the code and its documentation.
+****
+
+== Inline highlighting
+
+[.full-width%build]
+--
+[source,asciidoc]
+----
+include::samples/_highlight.adoc[tags=inline]
+----
+
+include::samples/_highlight.adoc[tags=inline]
 --
 
 == Source highlighting
 
-[.full-width]
+[.full-width%build]
 --
-include::samples/_highlight.adoc[tags=shell]
-
 [source,asciidoc]
 ----
 include::samples/_highlight.adoc[tags=shell]
 ----
+
+include::samples/_highlight.adoc[tags=shell]
 --
 
 == Highlighter
@@ -216,20 +298,35 @@ include::samples/_highlight.adoc[tags=shell]
 
 [.cue]
 ****
-Do not step on your own toes, highlighters compatibility will be discussed later on.
+CodeRay -> Asciidoctor, AsciidoctorJ, Asciidoctor PDF
+highlight.js -> Asciidoctor, AsciidoctorJ, Asciidoctor.js
+prettify -> Asciidoctor, AsciidoctorJ, Asciidoctor.js
+Pygments -> Asciidoctor, Asciidoctor PDF
+Rouge -> Asciidoctor PDF
+
+To use CodeRay, Pygments, or Rouge, you must have the appropriate library installed on your system. See the CodeRay or Pygments section to find installation instructions. (We don’t yet have a section about Rouge).
+
+On the other hand, if you’re using a client-side syntax highlighting library like highlight.js or prettify, there’s no need to install additional libraries. The generated HTML will load the required source files from a CDN (or custom URL or file path).
 ****
 
 == Source annotation
 
-[.two-columns.left-content]
+[.two-columns.left-content%build]
 --
-include::samples/_highlight.adoc[tags=annotate]
-
 [source,asciidoc,subs="-callouts"]
 ----
 include::samples/_highlight.adoc[tags=annotate]
 ----
+
+include::samples/_highlight.adoc[tags=annotate]
 --
+
+[.cue]
+****
+Break, this is the end of the syntax journey. 
+
+Let's get back to where and how all this is used. 
+****
 
 == Where is used Asciidoc ?
 
@@ -260,6 +357,23 @@ Last release for asciidoc python version is from 2013, whereas there is still wo
 
 == In my projects?
 
+== In your own projects suggestion
+
+== Project structure 
+
+[diagram]
+----
+src/                                
+   |__ docs/                          <1>
+           |__ asciidoc/              <2>
+                       |__ index.adoc <3>
+   |__ main/
+   |__ test/ 
+----
+<1> docs directory
+<2> asciidoc "category"
+<3> entrypoint to documentation
+
 
 == Maven version
 
@@ -286,23 +400,7 @@ include::{basedir}/pom.xml[tags=toHTML]
 ----
 <1> Use specific highlighter
 
-[.cue]
-****
-CodeRay
-Asciidoctor, AsciidoctorJ, Asciidoctor PDF
-highlight.js
-Asciidoctor, AsciidoctorJ, Asciidoctor.js
-prettify
-Asciidoctor, AsciidoctorJ, Asciidoctor.js
-Pygments
-Asciidoctor, Asciidoctor PDF
-Rouge
-Asciidoctor PDF
 
-To use CodeRay, Pygments, or Rouge, you must have the appropriate library installed on your system. See the CodeRay or Pygments section to find installation instructions. (We don’t yet have a section about Rouge).
-
-On the other hand, if you’re using a client-side syntax highlighting library like highlight.js or prettify, there’s no need to install additional libraries. The generated HTML will load the required source files from a CDN (or custom URL or file path).
-****
 == PDF
 
 [source,xml,indent=0]
@@ -310,22 +408,11 @@ On the other hand, if you’re using a client-side syntax highlighting library l
 include::{basedir}/pom.xml[tags=toPDF]
 ----
 
-== In your own projects suggestion
+[.cue]
+****
+You can also output ePUB / docbook / manpage / latex / Deck.js / Reveal.js / Bespoke.js [Used here]
+****
 
-== Project structure 
-
-[diagram]
-----
-src/                                
-   |__ docs/                          <1>
-           |__ asciidoc/              <2>
-                       |__ index.adoc <3>
-   |__ main/
-   |__ test/ 
-----
-<1> docs directory
-<2> asciidoc "category"
-<3> entrypoint to documentation
 
 == Gradle version
 
@@ -389,8 +476,13 @@ include::{basedir}/.ctproject[tags=docs]
 
 == Cons
 
- * Github does not follow `includes`
+ * Github does not follow `include`
  * Writing docs can become addictive
+
+[.cue]
+****
+Or partial `include` now.
+****
 
 == Tips
 
@@ -400,11 +492,11 @@ include::{basedir}/.ctproject[tags=docs]
 * Use includes for living content
 
 
-
 == Thank you
 
  * Wanna become :
   ** speaker ?
   ** your own boss ?
 
-  Let's have a chat !
+[quote]
+icon:users[] Let's have a chat !
