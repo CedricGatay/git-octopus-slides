@@ -406,6 +406,5 @@ include::{basedir}/.ctproject[tags=docs]
  * Wanna become :
   ** speaker ?
   ** your own boss ?
-  ** Code-Trooper ?
 
   Let's have a chat !
