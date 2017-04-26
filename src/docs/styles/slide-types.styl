@@ -36,6 +36,38 @@ section
   top: 0.2em;
   left: 3.5em;
 
+span.icon
+  width:40px;
+  display: inline-block;
+  text-align: center;
+
+.line-through
+  text-decoration: line-through
+
+.underline
+  text-decoration: underline
+
+.quote
+  blockquote:before
+    content: "\201c";
+    float: left;
+    font-size: 2.75em;
+    font-weight: bold;
+    line-height: .6em;
+    margin-left: -.6em;
+    color: $color-accent;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .1)
+  figcaption
+    margin-top: .5em;
+    margin-right: .5ex;
+    text-align: right
+    font-size: .9375em;
+    line-height: 1.45;
+    font-style: italic
+    cite
+      display: block;
+      letter-spacing: -.025em;
+      color: rgba(0, 0, 0, .6)
 
 .conum { display: inline-block; color: white !important; background-color: #222222; -webkit-border-radius: 100px; border-radius: 100px; text-align: center; width: 32px; height: 32px; font-size: 20px; font-weight: bold; line-height: 32px; font-family: Arial, sans-serif; font-style: normal; position: relative; top: -2px; letter-spacing: -1px; margin-right:6px}
 .conum * { color: white !important; }

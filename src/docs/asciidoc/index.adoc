@@ -32,17 +32,19 @@ icon:google[] GDG Tours lead
 
 == icon:code-fork[]
 
- * icon:bus[] http://navigtours.com[Navig'Tours] icon:apple[]/icon:android[]
- * icon:music[] Aucard de Tours / Terres du son icon:apple[]/icon:android[]
+ * icon:bus[] http://navigtours.com[Navig'Tours] icon:apple[] icon:android[]
+ * icon:music[] Aucard de Tours / Terres du son icon:apple[] icon:android[]
  * icon:github[] FOSS:
  ** icon:calendar[] Android Betterpickers icon:android[]
  ** icon:github-alt[] sbt plugins icon:globe[]
  ** icon:github-alt[] wicket-hot-reload icon:globe[]
+ ** icon:gitlab[] Gitlab contributor icon:globe[]
  
 == icon:life-ring[]
 
  * icon:keyboard-o[] Code
  * icon:fire[] Build
+ * icon:book[] Books
  * icon:dashboard[] Test: OpenDeviceLab Tours
 
 == icon:comment[]
@@ -75,7 +77,9 @@ icon:google[] GDG Tours lead
 * Feedback from usage in multiple project
 ****
 
-== Asciidoc syntax
+== !Asciidoc syntax
+[.canvas]
+image::full_syntax.jpg[]
 
 == Bullet point
 
@@ -105,14 +109,36 @@ include::samples/_ol.adoc[]
 
 --
 
+== Font variants
+
+[%build]
+--
+
+[source,asciidoc]
+----
+include::samples/_font.adoc[]
+----
+
+include::samples/_font.adoc[]
+
+--
+
+
+
 == Headings
 
-//include::samples/_h.adoc[]
+[%build]
+--
+++++
+<h2> SUB HEADING </h2>
+<h5> SUB^4 HEADING </h5>
+++++
 
 [source,asciidoc]
 ----
 include::samples/_h.adoc[]
 ----
+--
 
 [.cue]
 ****
@@ -120,7 +146,9 @@ There is a subtle thing in this demo of syntax, I can't show what the result is 
 ****
 
 
-== Rich content
+== !Rich content
+[.canvas]
+image::full_rich.gif[]
 
 == Links
 
@@ -198,6 +226,8 @@ include::samples/_rich.adoc[tags=admonition]
 
 --
 
+//FIXME list of admonitions in cue
+
 == Tables
 
 [%build]
@@ -234,37 +264,15 @@ File inclusion is a powerful tool that allows to split easily over multiple file
 NOTE: This slide deck is almost written using exclusively `include`
 ****
 
-== Graphing libraries
 
- * ditaa
- * graphviz
- * plantuml
 
-== PlantUML
 
-[.two-columns.center%build]
---
 
-[source, asciidoc]
-----
-include::{basedir}/src/main/groovy/App.groovy[tags=uml]
-----
 
-[plantuml, diagram-classes, png]     
-----
-include::{basedir}/src/main/groovy/App.groovy[tags=uml]
-----
 
---
+//FIXME slide with groovy content included
 
-[.cue]
-****
-When I say that includes are powerful, in fact this part is coming from the comments located on the top of a Groovy class file.
-
-You can really easily mix and match the code and its documentation.
-****
-
-== Inline highlighting
+== Monospace content
 
 [.full-width%build]
 --
@@ -321,12 +329,52 @@ include::samples/_highlight.adoc[tags=annotate]
 include::samples/_highlight.adoc[tags=annotate]
 --
 
+== Graphing libraries
+
+ * ditaa
+ * graphviz
+ * plantuml
+
+== PlantUML
+
+[.two-columns.center%build]
+--
+
+[source, asciidoc]
+----
+include::{basedir}/src/main/groovy/App.groovy[tags=uml]
+----
+
+[plantuml, diagram-classes, png]     
+----
+include::{basedir}/src/main/groovy/App.groovy[tags=uml]
+----
+
+--
+
+
+[.cue]
+****
+When I say that includes are powerful, in fact this part is coming from the comments located on the top of a Groovy class file.
+
+You can really easily mix and match the code and its documentation.
+****
+
+== Inclusion superpowers
+
+[source, groovy]
+----
+include::{basedir}/src/main/groovy/App.groovy[]
+----
+
 [.cue]
 ****
 Break, this is the end of the syntax journey. 
 
 Let's get back to where and how all this is used. 
 ****
+
+//FIXME need a slide break to transition easily
 
 == Where is used Asciidoc ?
 
@@ -348,16 +396,21 @@ Let's get back to where and how all this is used.
 Last release for asciidoc python version is from 2013, whereas there is still work being done nowadays on asciidoctor.
 ****
 
-== Markdown vs Asciidoc fight
+== Markdown vs Asciidoc shortlist
 
 * Document includes
 * Tables
 * Syntax highlighting
 
 
-== In my projects?
+== !In my projects?
+[.canvas]
+image::full_me.gif[]
 
-== In your own projects suggestion
+[.cue]
+****
+ This is a suggestion for using this in your own projects.
+****
 
 == Project structure 
 
@@ -375,7 +428,17 @@ src/
 <3> entrypoint to documentation
 
 
-== Maven version
+== Write content
+
+ * vim
+ * Visual Studio Code / Atom
+ * IntelliJ IDEA
+ * Asciidoctor.js live chrome extension
+ * Whatever
+
+== !Maven version
+[.canvas]
+image::full_maven.gif[]
 
 [%build]
 == Plugin configuration
@@ -391,7 +454,10 @@ include::{basedir}/pom.xml[tags=plugin]
 <4> Specify Asciidoctor PDF backend
 
 
-== Output configuration
+== !Output configuration
+[.canvas]
+image::full_output.gif[]
+
 
 == HTML
 [source,xml,indent=0]
@@ -414,6 +480,10 @@ You can also output ePUB / docbook / manpage / latex / Deck.js / Reveal.js / Bes
 ****
 
 
+== !Gradle version
+[.canvas]
+image::full_gradle.gif[]
+
 == Gradle version
 
 [source,groovy]
@@ -427,16 +497,10 @@ include::{basedir}/build.gradle[]
 <5> Set attributes
 
 
-== Write content
 
- * vim
- * Visual Studio Code / Atom
- * IntelliJ IDEA
- * Asciidoctor.js live chrome extension
- * Whatever
-
-
-== Real world usage
+== !Real world usage
+[.canvas]
+image::full_rw.gif[]
 
 == Slide decks
 
@@ -500,3 +564,7 @@ Or partial `include` now.
 
 [quote]
 icon:users[] Let's have a chat !
+
+== !Thanks
+[.canvas]
+image::full_thx.gif[]
