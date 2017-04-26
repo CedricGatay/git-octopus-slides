@@ -71,6 +71,7 @@ gulp.task('images', ['clean:images'], function() {
 
 gulp.task('onstage', ['clean:onstage'], function() {
   return gulp.src('node_modules/bespoke-onstage/**/*')
+    .pipe(gulp.src('onstage/**'))
     .pipe(gulp.dest('public/onstage'))
     .pipe(connect.reload());
 });
