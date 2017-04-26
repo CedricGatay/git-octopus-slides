@@ -374,6 +374,10 @@ Break, this is the end of the syntax journey.
 Let's get back to where and how all this is used. 
 ****
 
+== !Where is this used ?
+[.canvas]
+image::full_where.gif[]
+
 //FIXME need a slide break to transition easily
 
 == Where is used Asciidoc ?

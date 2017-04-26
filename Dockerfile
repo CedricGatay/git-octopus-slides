@@ -93,6 +93,7 @@ RUN apk update && \
 RUN gem install --no-ri --no-rdoc asciidoctor-diagram && \
     gem install --no-ri --no-rdoc asciidoctor-pdf --pre && \
     gem install --no-ri --no-rdoc coderay && \
+    gem install --no-ri --no-rdoc prawn-gmagick && \
     apk del gcc g++ make ruby-dev && \
     rm -rf /tmp/* /var/cache/apk/*
 
