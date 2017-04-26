@@ -1,5 +1,7 @@
 :source-highlighter: prettify
 :icons: font
+//gitlab icon is in 4.6
+:iconfont-cdn: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.min.css
 
 =  
 ////
@@ -57,7 +59,6 @@ icon:google[] GDG Tours lead
 
 * Plain text markup language
 * Markdown on steroid
-* Python
 * Multiple backends
 * Attributes
 * Extensions
@@ -129,6 +130,7 @@ include::samples/_font.adoc[]
 
 [%build]
 --
+// trick to allow headings to be rendered without breaking the slides flow
 ++++
 <h2> SUB HEADING </h2>
 <h5> SUB^4 HEADING </h5>
@@ -139,11 +141,6 @@ include::samples/_font.adoc[]
 include::samples/_h.adoc[]
 ----
 --
-
-[.cue]
-****
-There is a subtle thing in this demo of syntax, I can't show what the result is here.
-****
 
 
 == !Rich content
@@ -226,7 +223,18 @@ include::samples/_rich.adoc[tags=admonition]
 
 --
 
-//FIXME list of admonitions in cue
+[.cue]
+****
+NOTE: `NOTE`
+
+TIP: `TIP`
+
+IMPORTANT: `IMPORTANT`
+
+CAUTION: `CAUTION`
+
+WARNING: `WARNING`
+****
 
 == Tables
 
@@ -533,8 +541,9 @@ include::{basedir}/.ctproject[tags=docs]
 ----
 
 
-== Why should you use this?
-//TODO need good side pic !
+== !Why should you use this?
+[.canvas]
+image::full_why.gif[]
 
 
 == Easy to version
@@ -553,12 +562,14 @@ image::annotate_github.png[]
 == Build with *your* tools
 image::jenkins_build.png[]
 
+////
 == !
  * live documentation using includes
- 
+////
+
 [.cue]
 ****
-Face the bad side of things when using this
+However you will face the bad side of things when using a great toolset like this one.
 ****
 
 == Github does not follow `include`
@@ -569,12 +580,23 @@ image::github_no_includes.png[]
 Or partial `include` now, it properly links to other files.
 ****
 
-== Writing doc becomes addictive
-image::book_stack.gif[] //TODO
+== !Writing doc becomes addictive
 
-== MS Word 
-image::bleh.png[] //TODO
+[.canvas]
+image::full_books.gif[]
 
+[.cue]
+****
+Writing has never been this fun.
+****
+
+== !MS Word 
+[.canvas]
+image::word_bleh.png[]
+[.cue]
+****
+The other bad thing that will happen is when you *MUST* use MS Word (or Libre Office / Open Office / Pages)
+****
 
 == Tips
 
