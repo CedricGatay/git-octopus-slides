@@ -63,6 +63,17 @@ icon:google[] GDG Tours lead
 * Attributes
 * Extensions
 
+[.cue]
+****
+I've always loved writing technical things. From my own tips on my very intimate website (at first) to full length articles on magasines and website.
+I even participated in writing books. 
+
+However, there was always a thing that was bothering me, is that I was forced to use a counter intuitive editor. 
+And being not always easily focused, I could lose a lost of time trying to produce a neat output instead of concentrate on what was important: *content* !
+
+Asciidoctor allowed me to write and focus on the *content*, the *presentation* is the next step.
+****
+
 == Agenda
 
  * Syntax
@@ -515,10 +526,10 @@ image::full_rw.gif[]
 
 == Slide decks
 
- * JavaEE @ EPUT
+ * JavaEE @ EPUT 
  * Docker Jenkins Slave BBL
  * Various tech talks @JUG / @Docker Meetup
- * These slides
+ * These slides https://github.com/CedricGatay/asciidoctor-slides[icon:github[]]
 
 == @Code-Troopers  
 
