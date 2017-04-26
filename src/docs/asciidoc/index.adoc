@@ -13,7 +13,7 @@ Cedric Gatay <http://code-troopers.com>
 :!sectids:
 :!hardbreaks:
 :stem:
-:imagesdir: ./images/
+:imagesdir: ../images/
 :imagesoutdir: {basedir}/src/docs/images/
 
 == !
@@ -378,8 +378,6 @@ Let's get back to where and how all this is used.
 [.canvas]
 image::full_where.gif[]
 
-//FIXME need a slide break to transition easily
-
 == Where is used Asciidoc ?
 
 * Groovy lang documentation
@@ -389,6 +387,7 @@ image::full_where.gif[]
 
 == WTF Asciidoc vs Asciidoctor ?
 
+* Asciidoc is the language
 * Ruby implementation
 ** AsciidoctorJ Java binding
 ** asciidoctor.js opal transpiled version
@@ -535,22 +534,47 @@ include::{basedir}/.ctproject[tags=docs]
 
 
 == Why should you use this?
+//TODO need good side pic !
 
- * easy to version [diffable / mergeable]
+
+== Easy to version
+image::diff_text.png[]
+
+== Even visually
+
+image::diff_visual.png[]
+
+== Write on the go
+image::edit_github.png[]
+
+== Annotate easily
+image::annotate_github.png[]
+
+== Build with *your* tools
+image::jenkins_build.png[]
+
+== !
  * live documentation using includes
- * annotate code easily
- * built by your classical toolset
- * easy to write on the go
+ 
+[.cue]
+****
+Face the bad side of things when using this
+****
 
-== Cons
-
- * Github does not follow `include`
- * Writing docs can become addictive
+== Github does not follow `include`
+image::github_no_includes.png[]
 
 [.cue]
 ****
-Or partial `include` now.
+Or partial `include` now, it properly links to other files.
 ****
+
+== Writing doc becomes addictive
+image::book_stack.gif[] //TODO
+
+== MS Word 
+image::bleh.png[] //TODO
+
 
 == Tips
 
