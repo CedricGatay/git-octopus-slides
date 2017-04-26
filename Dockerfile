@@ -84,7 +84,7 @@ RUN MAVEN_VERSION=3.5.0 && \
 # install plantuml
 
 RUN apk update && \
-    apk add --update gcc g++ make ruby-dev ruby graphviz ttf-droid ttf-droid-nonlatin curl asciidoctor && \
+    apk add --update gcc g++ make ruby-dev ruby graphviz ttf-droid ttf-droid-nonlatin imagemagick graphicsmagick-dev curl asciidoctor && \
     curl -L https://sourceforge.net/projects/plantuml/files/plantuml.${PLANTUML_VERSION}.jar/download -o /opt/plantuml.jar && \
     echo '#!/bin/bash' > /usr/bin/plantuml && \
     echo 'GRAPHVIZ_DOT="$(which dot)" exec java -jar /opt/plantuml.jar "$@"' >> /usr/bin/plantuml && \
