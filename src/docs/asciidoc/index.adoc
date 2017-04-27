@@ -3,22 +3,14 @@
 //gitlab icon is in 4.6
 :iconfont-cdn: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.min.css
 
-=  
-////
-Cedric Gatay <http://code-troopers.com>
-:organization: Code-Troopers
-:position: Developer — Co-founder – GDG Tours
-:twitter: @Cedric_Gatay
-:github: CedricGatay
-:avatar: CG_BW.jpg
-////
 :!sectids:
 :!hardbreaks:
 :stem:
 :imagesdir: ../images/
 :imagesoutdir: {basedir}/src/docs/images/
 
-== !
+
+=  Asciidoctor, documentation from the undead (code)
 
 include::banner.adoc[]
 
@@ -620,7 +612,8 @@ The other bad thing that will happen is when you *MUST* use MS Word (or Libre Of
 == Thank you
 
  * Wanna become :
-  ** speaker ?
+  ** doc writer ?
+  ** speaker ? image:gdg.png[height=48] image:bbl.png[height=48]
   ** your own boss ?
 
 [quote]
