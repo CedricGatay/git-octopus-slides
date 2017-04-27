@@ -286,7 +286,7 @@ WARNING: `WARNING`
 
 == Tables
 
-[%build]
+[.styledTable%build]
 --
 
 [source,asciidoc]
