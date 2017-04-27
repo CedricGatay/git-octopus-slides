@@ -33,6 +33,11 @@ icon:google[] GDG Tours lead
  ** icon:github-alt[] sbt plugins icon:globe[]
  ** icon:github-alt[] wicket-hot-reload icon:globe[]
  ** icon:gitlab[] Gitlab contributor icon:globe[]
+
+[.cue]
+****
+One can also notice various Wicket framework contributions, docker images, jenkins plugins, restx, parsley.js bridges...
+****
  
 == icon:life-ring[]
 
@@ -41,12 +46,28 @@ icon:google[] GDG Tours lead
  * icon:book[] Books
  * icon:dashboard[] Test: OpenDeviceLab Tours
 
+[.cue]
+****
+* At times, I code for a living, the rest of the time, I code for fun.
+
+* I love helping team to shape their environment to achieve an easy to deliver pipeline (I gave a talk about this at a DevOps meetup in 2012). 
+* I worked with Packt Publishing on Wicket 6, Maven 3, Android development, JavaEE 7 books
+* And ultimately, as we have devices at @Code-Troopers, we have opened an OpenDeviceLab (one of the first in France) 
+to allow people to test their websites / applications on various devices.
+****
+
+
 == icon:comment[]
 
  * icon:shopping-bag[] Brown Bag Lunch
  * icon:google[] Google Developer Group Tours Lead
  * icon:institution[] Polytech'Tours instructor
 
+[.cue]
+****
+I love human exchange
+BLABLA
+****
 == What is Asciidoc ?
 
 * Plain text markup language
@@ -85,6 +106,10 @@ Asciidoctor allowed me to write and focus on the *content*, the *presentation* i
 [.canvas]
 image::full_syntax.jpg[]
 
+[.cue]
+****
+que va piano
+****
 == Bullet point
 
 [.two-columns%build]
@@ -113,6 +138,11 @@ include::samples/_ol.adoc[]
 
 --
 
+[.cue]
+****
+Don't bother numbering properly. Warning issued though
+****
+
 == Font variants
 
 [%build]
@@ -127,22 +157,37 @@ include::samples/_font.adoc[]
 
 --
 
+== Monospace content
+
+[.full-width%build]
+--
+[source,asciidoc]
+----
+include::samples/_highlight.adoc[tags=inline]
+----
+
+include::samples/_highlight.adoc[tags=inline]
+--
 
 
 == Headings
 
+
 [%build]
 --
+
+[source,asciidoc]
+----
+include::samples/_h.adoc[]
+----
+
 // trick to allow headings to be rendered without breaking the slides flow
 ++++
 <h2> SUB HEADING </h2>
 <h5> SUB^4 HEADING </h5>
 ++++
 
-[source,asciidoc]
-----
-include::samples/_h.adoc[]
-----
+
 --
 
 
@@ -253,6 +298,8 @@ include::samples/_table.adoc[]
 
 --
 
+
+
 == File includes
 
 [.center%build]
@@ -275,25 +322,6 @@ File inclusion is a powerful tool that allows to split easily over multiple file
 NOTE: This slide deck is almost written using exclusively `include`
 ****
 
-
-
-
-
-
-
-//FIXME slide with groovy content included
-
-== Monospace content
-
-[.full-width%build]
---
-[source,asciidoc]
-----
-include::samples/_highlight.adoc[tags=inline]
-----
-
-include::samples/_highlight.adoc[tags=inline]
---
 
 == Source highlighting
 
@@ -363,7 +391,6 @@ include::{basedir}/src/main/groovy/App.groovy[tags=uml]
 
 --
 
-
 [.cue]
 ****
 When I say that includes are powerful, in fact this part is coming from the comments located on the top of a Groovy class file.
@@ -423,7 +450,7 @@ image::full_me.gif[]
 
 [.cue]
 ****
- This is a suggestion for using this in your own projects.
+This is a suggestion for using this in your own projects.
 ****
 
 == Project structure 

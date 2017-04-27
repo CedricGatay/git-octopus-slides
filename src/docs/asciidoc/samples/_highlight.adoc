@@ -3,10 +3,10 @@ Change the default password (which is `weakisyoda`)
 end::inline[]
 
 tag::shell[]
-[source,shell]
--------
-docker run -d -v /:/ -w / alpine:latest rm -rf
--------
+[source,java]
+-----
+"NIH".equals(inventedLocation) ? "🐑" : "🐱"
+-----
 end::shell[]
 
 
