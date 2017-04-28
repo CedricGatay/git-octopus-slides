@@ -65,16 +65,12 @@ to allow people to test their websites / applications on various devices.
 
 [.cue]
 ****
-I love human exchange
-BLABLA
+I love talking with people and discover how they work and think. That's why I do my best to talk and allow the people to talk to each other.
 ****
-== What is Asciidoc ?
 
-* Plain text markup language
-* Markdown on steroid
-* Multiple backends
-* Attributes
-* Extensions
+== ! Writing
+[.canvas]
+image::full_writing.gif[]
 
 [.cue]
 ****
@@ -86,6 +82,16 @@ And being not always easily focused, I could lose a lost of time trying to produ
 
 Asciidoctor allowed me to write and focus on the *content*, the *presentation* is the next step.
 ****
+
+
+== What is Asciidoc ?
+
+* Plain text markup language
+* Markdown on steroid
+* Multiple backends
+* Attributes
+* Extensions
+
 
 == Agenda
 
@@ -507,6 +513,9 @@ include::{basedir}/pom.xml[tags=toHTML]
 ----
 <1> Use specific highlighter
 
+== !
+[.contain.canvas]
+image::full_html.png[]
 
 == PDF
 
@@ -520,6 +529,9 @@ include::{basedir}/pom.xml[tags=toPDF]
 You can also output ePUB / docbook / manpage / latex / Deck.js / Reveal.js / Bespoke.js [Used here]
 ****
 
+== !
+[.canvas]
+image::full_pdf.png[]
 
 == !Gradle version
 [.canvas]
