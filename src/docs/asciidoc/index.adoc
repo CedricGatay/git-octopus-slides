@@ -587,27 +587,72 @@ include::{basedir}/.ctproject[tags=docs]
 [.canvas]
 image::full_why.gif[]
 
+[.cue]
+****
+Ok...
+
+That's a lot of things, let's sum up why are the benefits of using a cool thing like Asciidoctor.
+****
+
 
 == Easy to version
 image::diff_text.png[]
+
+[.cue]
+****
+The first thing, the most obvious is the ease of comparing using a classical diff tool, you can easily see what has changed. 
+
+No need to mess with revision mode or whatsoever
+****
 
 == Even visually
 
 image::diff_visual.png[]
 
+[.cue]
+****
+A nice thing is built in the most used  git web GUIs (github/bitbucket/gitlab) will show a visual diff of your content.
+
+You can use this in Pull request handling to see what has changed in the documentation.
+****
+
 == Write on the go
 image::edit_github.png[]
+
+[.cue]
+****
+Are you aware of the "edit this file" magic button in git web GUIs. 
+
+It allows easy and fast editing from wherever you are (even during a pull request review for example), it is a huge step forward
+better documentation. A lot of OSS projects have seen an increase in documentation quality since they use these kind of language.
+****
 
 == Annotate easily
 image::annotate_github.png[]
 
+[.cue]
+****
+The same applies to annotation on documentation. Reviewing easily from your phone is comfy, isn't it ?
+****
+
 == Build with *your* tools
 image::jenkins_build.png[]
+
+[.cue]
+****
+And as we've just discussed, you can build your doc with your usual tools and deploy accordingly.
+
+For instance, this project features a Jenkinsfile that publish the docs with the HTML publisher plugin, but you can then use
+FTP / SCP / Docker run (or a simple `python -m SimpleHTTPServer`) to serve the documentation.
+****
 
 ////
 == !
  * live documentation using includes
 ////
+== !Bad side of things
+[.canvas]
+image::full_bad.gif[]
 
 [.cue]
 ****
@@ -622,6 +667,15 @@ image::github_no_includes.png[]
 Or partial `include` now, it properly links to other files.
 ****
 
+
+== !MS Word 
+[.canvas]
+image::word_bleh.png[]
+[.cue]
+****
+The other bad thing that will happen is when you *MUST* use MS Word (or Libre Office / Open Office / Pages)
+****
+
 == !Writing doc becomes addictive
 
 [.canvas]
@@ -630,14 +684,6 @@ image::full_books.gif[]
 [.cue]
 ****
 Writing has never been this fun.
-****
-
-== !MS Word 
-[.canvas]
-image::word_bleh.png[]
-[.cue]
-****
-The other bad thing that will happen is when you *MUST* use MS Word (or Libre Office / Open Office / Pages)
 ****
 
 == Tips
