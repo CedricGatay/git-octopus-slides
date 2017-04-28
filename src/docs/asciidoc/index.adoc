@@ -437,7 +437,6 @@ Let's get back to where and how all this is used.
 * Groovy lang documentation
 * JBoss docs
 * Slide decks
-* Books ?
 
 == WTF Asciidoc vs Asciidoctor ?
 
@@ -534,14 +533,16 @@ image::full_html.png[]
 include::{basedir}/pom.xml[tags=toPDF]
 ----
 
+
+== !
+[.canvas]
+image::full_pdf.png[]
+
 [.cue]
 ****
 You can also output ePUB / docbook / manpage / latex / Deck.js / Reveal.js / Bespoke.js [Used here]
 ****
 
-== !
-[.canvas]
-image::full_pdf.png[]
 
 == !Gradle version
 [.canvas]
@@ -574,7 +575,7 @@ image::full_rw.gif[]
 
 == @Code-Troopers  
 
- * Blog and website [previously Jekyll, now Hugo]
+ * Blog and website
  * Internal documentation 
    ** DNS Bindings
    ** Projects README
@@ -582,16 +583,19 @@ image::full_rw.gif[]
 
 [.cue]
 ****
+ Blog -> [previously Jekyll, now Hugo]
+
 We have our own tool for managing project launch in a consistent way by aliasing run commands to common verbs.
 
 However, it might be useful at times to generate a proper documentation
 ****
 
+////
 [source,shell]
 ----
 include::{basedir}/.ctproject[tags=docs]
 ----
-
+////
 
 == !Why should you use this?
 [.canvas]
