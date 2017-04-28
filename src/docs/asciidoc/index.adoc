@@ -114,7 +114,7 @@ image::full_syntax.jpg[]
 
 [.cue]
 ****
-que va piano
+"que va piano va sano
 ****
 == Bullet point
 
@@ -279,6 +279,8 @@ include::samples/_rich.adoc[tags=admonition]
 
 [.cue]
 ****
+A firm warning or reprimand
+
 NOTE: `NOTE`
 
 TIP: `TIP`
@@ -413,14 +415,22 @@ include::{basedir}/src/main/groovy/App.groovy[]
 
 [.cue]
 ****
-Break, this is the end of the syntax journey. 
+This come from the groovydoc. If the code moves, the doc is next to it. If the code is deleted, the doc is also deleted with it.
 
-Let's get back to where and how all this is used. 
+Any good IDE will tend to help you refactor the doc too...
 ****
+
 
 == !Where is this used ?
 [.canvas]
 image::full_where.gif[]
+
+[.cue]
+****
+Break, this is the end of the syntax journey. 
+
+Let's get back to where and how all this is used. 
+****
 
 == Where is used Asciidoc ?
 
