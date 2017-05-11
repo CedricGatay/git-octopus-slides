@@ -118,7 +118,7 @@ gulp.task('watch', function() {
 });
 
 gulp.task('deploy', ['clean', 'build'], function(done) {
-  ghpages.publish(path.join(__dirname, 'public'), { logger: gutil.log, remote: 'github' }, done);
+  ghpages.publish(path.join(__dirname, 'public'), { logger: gutil.log, }, done);
 });
 
 gulp.task('build', ['js', 'html', 'css', 'fonts', 'images', 'onstage']);

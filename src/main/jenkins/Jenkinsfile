@@ -1,0 +1,61 @@
+properties([[$class: 'ParametersDefinitionProperty', parameterDefinitions: [
+	[$class: 'StringParameterDefinition', defaultValue: 'origin/*/PRJ-*', description: 'Branches to include (with `origin/` prefix)', name: 'BRANCH_TO_MERGE'],
+	[$class: 'BooleanParameterDefinition', defaultValue: true, description: 'Deploy on QA1', name: 'DEPLOY_ON_QA1'],
+	[$class: 'BooleanParameterDefinition', defaultValue: false, description: 'Deploy on Stage0', name: 'DEPLOY_ON_STAGE0'],
+]], pipelineTriggers([])])
+
+
+node('octopus') {
+	def credentialId = '65894fab-92a8-4132-a5b8-224319ff763f'
+	stage('Clean checkout') {
+		checkout([$class: 'GitSCM',
+				  branches: [[name: '*/master']],
+				  extensions: [
+					  [$class: 'CleanBeforeCheckout'],
+					  [$class: 'PruneStaleBranch']
+				  ],
+				  userRemoteConfigs: [
+                      [
+                          credentialsId: credentialId, url: 'git@host/myproject.git', 
+                          //tag::remoteCfg[]
+                            refspec: '+refs/heads/*:refs/remotes/origin/* ' +
+                                '+refs/conflicts/*:refs/conflicts/*' // <1>
+                          //end::remoteCfg[]
+                      ]
+                  ]
+		])
+	}
+    //tag::octopus[]
+	stage('Run octopus merge on specified branches') {
+		//see install guide on http://linuxbrew.sh, then brew install git-octopus
+		env.PATH = "/home/jenkins/.linuxbrew/bin/:${env.PATH}" // <1>
+		sh "git octopus ${BRANCH_TO_MERGE} origin/master" // <2>
+	}
+	stage('Push octopus to bitbucket') {
+		sshagent([credentialId]) {
+			sh 'git push origin +HEAD:refs/heads/octopus'
+		}
+	}
+    //end::octopus[]
+	if ("true".equals(DEPLOY_ON_QA1)) {
+		runDeployStage("qa1", "project_qa1")
+	}
+	if ("true".equals(DEPLOY_ON_STAGE0)) {
+		runDeployStage("stage0", "project_stage0")
+	}
+}
+
+def runDeployStage(name, machine) {
+    //tag::deploying[]
+	stage("Deploy octopus on ${name}") {
+		build job: 'Project - build branch and deploy',  // <1>
+            parameters: [ 
+			[$class: 'StringParameterValue', 
+                name: 'BRANCH_TO_BUILD', value: 'octopus'], // <2>
+			[$class: 'StringParameterValue', 
+                name: 'NODE_TO_DEPLOY', value: machine] // <3>
+		]
+	}
+    //end::deploying[]
+}
+

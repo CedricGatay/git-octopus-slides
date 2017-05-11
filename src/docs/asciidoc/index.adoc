@@ -10,7 +10,7 @@
 :imagesoutdir: {basedir}/src/docs/images/
 
 
-=  Asciidoctor, documentation from the undead (code)
+=  git-octopus, ease deployment and testing
 
 include::banner.adoc[]
 
