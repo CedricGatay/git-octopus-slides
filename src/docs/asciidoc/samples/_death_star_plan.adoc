@@ -1,2 +1,0 @@
-[caption="Death star plan"]
-image::death_star_plan.png[]

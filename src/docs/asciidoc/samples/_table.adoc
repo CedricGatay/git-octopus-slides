@@ -1,6 +1,0 @@
-[cols="2a,5a,8a"]
-|===
-h| Name h| Port h| Description
-| Nginx | 80 | Docker proxy
-| JBoss >m| 9010 | https://www.google.fr[Base app container]
-|===
